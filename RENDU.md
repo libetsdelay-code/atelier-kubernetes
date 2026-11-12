@@ -2,8 +2,8 @@
 
 > Complétez ce fichier au fil de l'atelier, puis faites un commit et un push (voir la section « Rendu » du README).
 
-**Nom / Prénom :**
-**Groupe :**
+**Nom / Prénom :** COLIN Maxime
+**Groupe :** RS2
 
 > Environnement : l'atelier a été réalisé avec k3d v5.9.0 (k3s v1.35.5) et kubectl v1.37 sur une machine Linux locale avec Docker, à la place d'un GitHub Codespace. Les commandes sont identiques ; seule l'URL publique de la question 12 dépend du Codespace.
 
