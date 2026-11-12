@@ -55,7 +55,7 @@ site-5968b74899-vrngg   1/1     Running   0          59s   10.42.0.9   k3d-lab-a
 ## Exercice 6 — Portainer & Mario
 
 12. URL publique de votre Mario :
-    > *Atelier fait en local, sans Codespace : pas d'URL `*.app.github.dev`. Mario répond sur `http://localhost:8585` (HTTP 200) via `kubectl port-forward svc/mario 8585:85`. À compléter si l'atelier est rejoué dans un Codespace (onglet PORTS, Port Visibility : Public).*
+    > https://effective-train-v679g664q4j73r46-8585.app.github.dev/ (Mario déployé dans un GitHub Codespace avec k3d, port 8585 rendu public dans l'onglet PORTS)
 13. Retrouvez le Deployment `mario` en ligne de commande. Portainer et `kubectl` parlent-ils au même composant ? Lequel ?
     > `kubectl get deploy mario -o yaml` montre un Deployment standard, identique dans sa structure à ceux créés en CLI. Portainer y ajoute seulement des **labels** de suivi : `io.portainer.kubernetes.application.stack: mario`, `...application.owner: admin`, `...application.kind: content`, etc. Les deux outils parlent au **même composant : l'API Server (kube-apiserver)** du control plane. Portainer y accède depuis l'intérieur du cluster avec son ServiceAccount (lié en `cluster-admin`) ; `kubectl` y accède depuis l'extérieur avec le kubeconfig.
 
